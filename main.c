@@ -1,5 +1,5 @@
 #include "libft/libft.h"
-
+//yo
 int	choose_pivot(t_pm *s)
 {
 	int	tmp;

@@ -6,7 +6,7 @@
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/25 16:26:22 by adhondt           #+#    #+#             */
-/*   Updated: 2018/05/25 17:08:15 by adhondt          ###   ########.fr       */
+/*   Updated: 2018/05/25 17:10:24 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,6 @@
 # include <unistd.h>
 # include <stdlib.h>
 
-//int		main(int argc, char **argv);
-//void	sort(int *a, int alen, int ipivot);
 void	pivot_and_sort(int *a, int alen);
 
 int		bigger_than_pivot(int *a, int alen, int ipivot);

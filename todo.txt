@@ -1,0 +1,2 @@
+Calculerl a mediane ou n'importe quel autree data stockant les argv  pour 
+choisir le pivot

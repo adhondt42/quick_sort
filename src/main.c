@@ -42,11 +42,10 @@ void	pivot_and_sort(int *a, int alen)
 			swap_int(&(a[last]), &(a[middle]));
 		if (a[0] > a[middle])
 			swap_int(& (a[0]), &(a[middle]));
+		if (alen == 3)
+			return ;
 	}
-	if (alen <= 3)
-		return ;
-	else
-		swap_int(&(a[middle]), &(a[last]));
+	swap_int(&(a[middle]), &(a[last])); // take the pivot to last pos.
 	sort(a, alen, last);
 }
 

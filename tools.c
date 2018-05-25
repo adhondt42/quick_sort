@@ -1,29 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdel.c                                        :+:      :+:    :+:   */
+/*   tools.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/28 20:45:16 by adhondt           #+#    #+#             */
-/*   Updated: 2017/11/28 20:45:55 by adhondt          ###   ########.fr       */
+/*   Created: 2018/05/25 13:44:23 by adhondt           #+#    #+#             */
+/*   Updated: 2018/05/25 16:02:06 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft/libft.h"
 
-void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
+int		bigger_than_pivot(int *a, int alen, int pivot)
 {
-	t_list	*ltemp;
-	t_list	*ltemp2;
+	int	i;
 
-	ltemp = (*alst);
-	while (ltemp)
-	{
-		ltemp2 = ltemp->next;
-		del(ltemp->content, ltemp->content_size);
-		free(ltemp);
-		ltemp = ltemp2;
-	}
-	*alst = NULL;
+	i = 0;
+	while (a[i] <= a[pivot])
+		i++;
+	return (i);
 }
+
+
+int		smaller_than_pivot(int *a, int alen, int pivot)
+{
+	int	i;
+
+	i = alen - 1;
+	while (a[i] >= a[pivot])
+		i--;
+	return (i);
+
+}
+
+void	swap_int(int *a, int *b)
+{
+	int tmp;
+
+	tmp = *a;
+	*a = *b;
+	*b = tmp;
+}
+
+
+

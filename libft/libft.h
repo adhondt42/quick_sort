@@ -6,7 +6,7 @@
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 12:51:25 by adhondt           #+#    #+#             */
-/*   Updated: 2018/05/24 17:48:05 by adhondt          ###   ########.fr       */
+/*   Updated: 2018/05/25 15:24:22 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,15 @@ typedef struct	s_pm
 {
 	int			*a;
 	int			alen;
+	int			pivot;
 
 }				t_pm;
 
-
-
-
+int		sort(int *a, int alen, int pivot);
+int		bigger_than_pivot(int *a, int alen, int pivot);
+int		smaller_than_pivot(int *a, int alen, int pivot);
+void	swap_int(int *a, int *b);
+void	choose_pivot(t_pm *s);
 int				pos_str_tab(char *haystack, char **needle);
 void			ft_putinttab(int *tab, int size, char *sp);
 char			*add_nendchar(char *str, char c, size_t n);
@@ -46,7 +49,6 @@ char			*ft_strcnew(size_t n, char c);
 int				pos_c_str(char c, char *str);
 int				dirlen(char *path, int a);
 char			**ft_readdir(char *path, int a);
-struct stat		*get_lstats(char *path, char *name);
 char			*createpath(char *path, char *name);
 void			ft_putnstr(const char *str, size_t n);
 void			ft_putstr_c(char *str, char *color);
@@ -85,11 +87,6 @@ char			*ft_strcdup(const char *tab, char c);
 char			*ft_strccpy(char *dest, const char *src, char c);
 void			puttab(char **tab, char *end);
 int				ft_find_next_sqrt(int nb);
-t_list			*ft_lstnew(void const *content, size_t content_size);
-void			ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
-void			ft_lstdel(t_list **alst, void (*del)(void *, size_t));
-void			ft_lstiter(t_list *lst, void (*f)(t_list *elem));
-void			ft_lstadd(t_list **alst, t_list *new);
 char			**ft_strsplit(char const *src, char c);
 void			ft_striteri(char *s, void(*f)(unsigned int, char *));
 void			ft_striter(char *s, void(*f)(char *));

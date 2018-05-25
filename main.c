@@ -2,7 +2,6 @@
 
 void	pivot_and_sort(int *a, int alen)
 {
-	int	tmp;
 	int	middle;
 	int	last;
 
@@ -54,7 +53,6 @@ int	sort(int *a, int alen, int ipivot)
 int	main(int argc, char **argv)
 {
 	int		i;
-	int		n;
 	int		*a;
 	int		alen;
 

@@ -8,6 +8,8 @@ void	sort(int *a, int alen, int ipivot)
 
 	ileft = bigger_than_pivot(a, alen, ipivot);
 	iright = smaller_than_pivot(a, alen, ipivot);
+	if (ileft < 0 || iright < 0)
+		return ;
 	if (ileft > iright)
 	{
 		swap_int(&a[ileft], &a[ipivot]);
@@ -31,6 +33,7 @@ void	pivot_and_sort(int *a, int alen)
 	{
 		if (a[0] > a[1])
 			swap_int(&a[0], &a[1]);
+		return ;
 	}
 	else
 	{

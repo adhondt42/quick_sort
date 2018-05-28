@@ -6,7 +6,7 @@
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/25 13:44:23 by adhondt           #+#    #+#             */
-/*   Updated: 2018/05/25 17:08:36 by adhondt          ###   ########.fr       */
+/*   Updated: 2018/05/28 19:40:11 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,10 @@ int		bigger_than_pivot(int *a, int alen, int ipivot)
 	int	i;
 
 	i = 0;
-	while (a[i] <= a[ipivot] && i < alen)
+	while (a[i] <= a[ipivot] && i < alen && i < alen)
 		i++;
+	if (i == alen)
+		return (-1);
 	return (i);
 }
 

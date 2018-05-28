@@ -6,12 +6,13 @@
 /*   By: adhondt <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/25 16:26:22 by adhondt           #+#    #+#             */
-/*   Updated: 2018/05/25 17:10:24 by adhondt          ###   ########.fr       */
+/*   Updated: 2018/05/28 19:31:06 by adhondt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef QUICK_SORT_H
 # define QUICK_SORT_H
+# include <stdio.h>
 # include <unistd.h>
 # include <stdlib.h>
 
